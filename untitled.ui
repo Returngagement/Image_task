@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>934</width>
+    <height>580</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>40</y>
+      <width>871</width>
+      <height>481</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="S_Image">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="R_Image">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>10</y>
+      <width>113</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>934</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>打开图片</string>
+    </property>
+    <addaction name="OpenPicture"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>平滑和锐化</string>
+    </property>
+    <addaction name="Mid"/>
+    <addaction name="Average"/>
+    <addaction name="Max"/>
+    <addaction name="Min"/>
+    <addaction name="Laplace"/>
+    <addaction name="Gray"/>
+    <addaction name="ZhiFangTu"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>图像缩放</string>
+    </property>
+    <widget class="QMenu" name="menu_4">
+     <property name="title">
+      <string>翻转</string>
+     </property>
+     <addaction name="Flip_horizontally"/>
+     <addaction name="Flip_vertically"/>
+    </widget>
+    <addaction name="Big"/>
+    <addaction name="Small"/>
+    <addaction name="XuanZhuan"/>
+    <addaction name="menu_4"/>
+    <addaction name="FanSe"/>
+   </widget>
+   <widget class="QMenu" name="menu_5">
+    <property name="title">
+     <string>检测</string>
+    </property>
+    <addaction name="Point"/>
+    <addaction name="Line"/>
+    <addaction name="Edge"/>
+   </widget>
+   <widget class="QMenu" name="menu_6">
+    <property name="title">
+     <string>膨胀腐蚀</string>
+    </property>
+    <addaction name="Swell"/>
+    <addaction name="Corrode"/>
+    <addaction name="Kai"/>
+    <addaction name="Bi"/>
+   </widget>
+   <widget class="QMenu" name="menu_7">
+    <property name="title">
+     <string>分割</string>
+    </property>
+    <addaction name="Threshold"/>
+    <addaction name="ZiDong_Threshold"/>
+    <addaction name="OSTU"/>
+    <addaction name="Area_Grow"/>
+   </widget>
+   <widget class="QMenu" name="menu_8">
+    <property name="title">
+     <string>添加</string>
+    </property>
+    <addaction name="Add_Line"/>
+    <addaction name="Add_Rectangle"/>
+    <addaction name="Add_Circle"/>
+    <addaction name="Add_Chinese"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_6"/>
+   <addaction name="menu_5"/>
+   <addaction name="menu_7"/>
+   <addaction name="menu_8"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="OpenPicture">
+   <property name="text">
+    <string>打开</string>
+   </property>
+  </action>
+  <action name="Mid">
+   <property name="text">
+    <string>中值滤波</string>
+   </property>
+  </action>
+  <action name="Average">
+   <property name="text">
+    <string>均值滤波</string>
+   </property>
+  </action>
+  <action name="Max">
+   <property name="text">
+    <string>最大值滤波</string>
+   </property>
+  </action>
+  <action name="Min">
+   <property name="text">
+    <string>最小值滤波</string>
+   </property>
+  </action>
+  <action name="Laplace">
+   <property name="text">
+    <string>拉普拉斯算子</string>
+   </property>
+  </action>
+  <action name="Big">
+   <property name="text">
+    <string>放大</string>
+   </property>
+  </action>
+  <action name="Small">
+   <property name="text">
+    <string>缩小</string>
+   </property>
+  </action>
+  <action name="XuanZhuan">
+   <property name="text">
+    <string>旋转</string>
+   </property>
+  </action>
+  <action name="Flip_horizontally">
+   <property name="text">
+    <string>水平翻转</string>
+   </property>
+  </action>
+  <action name="Flip_vertically">
+   <property name="text">
+    <string>垂直翻转</string>
+   </property>
+  </action>
+  <action name="Gray">
+   <property name="text">
+    <string>灰度化</string>
+   </property>
+  </action>
+  <action name="FanSe">
+   <property name="text">
+    <string>反色</string>
+   </property>
+  </action>
+  <action name="Swell">
+   <property name="text">
+    <string>膨胀</string>
+   </property>
+  </action>
+  <action name="Corrode">
+   <property name="text">
+    <string>腐蚀</string>
+   </property>
+  </action>
+  <action name="Kai">
+   <property name="text">
+    <string>开运算</string>
+   </property>
+  </action>
+  <action name="Bi">
+   <property name="text">
+    <string>闭运算</string>
+   </property>
+  </action>
+  <action name="ZhiFangTu">
+   <property name="text">
+    <string>直方图均衡化</string>
+   </property>
+  </action>
+  <action name="Point">
+   <property name="text">
+    <string>点</string>
+   </property>
+  </action>
+  <action name="Line">
+   <property name="text">
+    <string>线</string>
+   </property>
+  </action>
+  <action name="Edge">
+   <property name="text">
+    <string>边缘</string>
+   </property>
+  </action>
+  <action name="Threshold">
+   <property name="text">
+    <string>阈值分割</string>
+   </property>
+  </action>
+  <action name="ZiDong_Threshold">
+   <property name="text">
+    <string>全局自动阈值分割</string>
+   </property>
+  </action>
+  <action name="OSTU">
+   <property name="text">
+    <string>OSTU</string>
+   </property>
+  </action>
+  <action name="Area_Grow">
+   <property name="text">
+    <string>区域生长</string>
+   </property>
+  </action>
+  <action name="Add_Line">
+   <property name="text">
+    <string>直线</string>
+   </property>
+  </action>
+  <action name="Add_Rectangle">
+   <property name="text">
+    <string>矩形</string>
+   </property>
+  </action>
+  <action name="Add_Circle">
+   <property name="text">
+    <string>圆</string>
+   </property>
+  </action>
+  <action name="action_23">
+   <property name="text">
+    <string>字符</string>
+   </property>
+  </action>
+  <action name="Add_Chinese">
+   <property name="text">
+    <string>文字</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
